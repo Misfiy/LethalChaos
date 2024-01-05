@@ -42,11 +42,9 @@ public class RandomTeleport : EventBase
 
     private IEnumerator DoTeleport(PlayerControllerB controller)
     {
-        controller.beamOutBuildupParticle.Play();
+        controller.beamUpParticle.Play();
 
-        yield return new WaitForSeconds(3.5f);
-        
-        controller.beamOutBuildupParticle.Stop();
+        yield return new WaitForSeconds(2.5f);
         
         PlayerControllerB playerController = GameNetworkManager.Instance.localPlayerController;
         
@@ -65,6 +63,10 @@ public class RandomTeleport : EventBase
                 playerController.ItemSlots[i].isInFactory = true;
             }
         }
+        
+        yield return new WaitForSeconds(1f);
+        
+        controller.beamOutBuildupParticle.Stop();
         
         // yield return new WaitForSeconds(1);
     }

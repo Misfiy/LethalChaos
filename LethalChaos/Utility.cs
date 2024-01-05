@@ -14,13 +14,6 @@ public static class Utility
             list.Add(element);
         return list;
     }
-
-    public static List<T> CombineWith<T>(this List<T> list1, List<T> list2)
-    {
-        foreach (T value in list2)
-            list1.Add(value);
-        return list1;
-    }
     
     // Ty Brutal Company 
     public static GameObject FindEnemyPrefabByType(Type enemyType, List<SpawnableEnemyWithRarity> enemyList, SelectableLevel newLevel)
@@ -62,6 +55,6 @@ public static class Utility
         return component;
     }
 
-    public static float CurrentScrapAmountMultiplier => RoundManager.Instance.currentLevel.PlanetName.Contains("Titan") ? 3f : 1.85f;
-    public static float CurrentScrapValueMultiplier => RoundManager.Instance.currentLevel.PlanetName.Contains("Titan") ? 1.6f : 1.2f;
+    public static float CurrentScrapAmountMultiplier => RoundManager.Instance.currentLevel.PlanetName.Contains("Titan") ? 3f : 1.5f;
+    public static float CurrentScrapValueMultiplier => RoundManager.Instance.currentLevel.PlanetName.Contains("Titan") ? 1.5f : 1.25f;
 }

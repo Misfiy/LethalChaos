@@ -22,13 +22,14 @@ public class MineHell : EventBase
         {
             Vector3 pos =
                 RoundManager.Instance.GetRandomNavMeshPositionInBoxPredictable(
-                    original, 35, randomSeed: new(UnityEngine.Random.Range(1, 1000)), layerMask: -5);
+                    original, 30, randomSeed: new(UnityEngine.Random.Range(1, 1000)), layerMask: -5);
             
             GameObject landmine = Object.Instantiate(Variables.LandminePrefab, pos, Quaternion.identity);
+
             landmine.GetComponent<NetworkObject>().Spawn(true);
             
             if (spawnMore)
-                SpawnMines(pos, 2, false);
+                SpawnMines(pos, 5, false);
         }
     }
 }

@@ -68,7 +68,7 @@ internal class RoundManagerPatch
 
         while (RoundManager.Instance.currentLevel == level && EventBase.CurrentPhase == phase)
         {
-            yield return new WaitForSeconds(90);
+            yield return new WaitForSeconds(60);
             Plugin.Logging.LogInfo("Running random event..");
             
             EventBase ev = EventBase.GetRandomForPhase();

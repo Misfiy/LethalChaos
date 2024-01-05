@@ -9,7 +9,7 @@ public class Plugin : BaseUnityPlugin
 {
     private const string modGUID = "Misfiy.LethalChaos";
     private const string modName = "Lethal Chaos";
-    private const string modVersion = "1.0.2";
+    private const string modVersion = "1.0.3";
     
     private readonly Harmony harmony = new(modGUID);
 

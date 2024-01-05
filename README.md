@@ -2,6 +2,9 @@
 * A Lethal Company mod intended to make the game more chaotic
 * More loot will spawn, and will be worth more. Especially true on Titan.
 
+## Known Issues
+* A lot of desyncing
+
 ## Events
 * OpenVents: Opens all vents with enemies inside
 * RandomTeleport: Teleports you to a random location inside the facility.

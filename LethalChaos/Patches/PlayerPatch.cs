@@ -10,12 +10,7 @@ internal class PlayerPatch
     [HarmonyPostfix]
     private static void OnUpdated(PlayerControllerB __instance)
     {
-        __instance.movementSpeed = SpeedBoost.IsActivated ? 9 : 4.5f;
-        __instance.climbSpeed = SpeedBoost.IsActivated ? 8 : 3;
-
-        if (SpeedBoost.IsActivated)
-        {
-            __instance.sprintMeter = 1;
-        }
+        __instance.movementSpeed = SpeedBoost.IsActivated ? 7.5f : 4.5f;
+        __instance.climbSpeed = SpeedBoost.IsActivated ? 9 : 3;
     }
 }
