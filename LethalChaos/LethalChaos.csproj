@@ -30,6 +30,9 @@
         <Reference Include="UnityEngine.AIModule">
             <HintPath>D:\Steam Library\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.AIModule.dll</HintPath>
         </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule">
+            <HintPath>D:\Steam Library\steamapps\common\Lethal Company\Lethal Company_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">

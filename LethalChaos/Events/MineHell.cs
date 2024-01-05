@@ -24,7 +24,7 @@ public class MineHell : EventBase
                 RoundManager.Instance.GetRandomNavMeshPositionInBoxPredictable(
                     original, 35, randomSeed: new(UnityEngine.Random.Range(1, 1000)), layerMask: -5);
             
-            GameObject landmine = Object.Instantiate(Variables.Landmine, pos, Quaternion.identity);
+            GameObject landmine = Object.Instantiate(Variables.LandminePrefab, pos, Quaternion.identity);
             landmine.GetComponent<NetworkObject>().Spawn(true);
             
             if (spawnMore)

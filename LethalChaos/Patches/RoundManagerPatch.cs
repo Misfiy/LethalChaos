@@ -19,7 +19,7 @@ internal class RoundManagerPatch
         foreach (SpawnableMapObject spawnableMapObject in RoundManager.Instance.currentLevel.spawnableMapObjects)
         {
             if (spawnableMapObject.prefabToSpawn.GetComponentInChildren<Landmine>() != null)
-                Variables.Landmine = spawnableMapObject.prefabToSpawn;
+                Variables.LandminePrefab = spawnableMapObject.prefabToSpawn;
         }
         
         EventBase.ResetUses();
@@ -68,7 +68,7 @@ internal class RoundManagerPatch
 
         while (RoundManager.Instance.currentLevel == level && EventBase.CurrentPhase == phase)
         {
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(90);
             Plugin.Logging.LogInfo("Running random event..");
             
             EventBase ev = EventBase.GetRandomForPhase();
